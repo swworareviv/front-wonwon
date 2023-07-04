@@ -3,11 +3,15 @@ module.exports = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ['*', 'localhost', 'http://localhost:1337', '167.71.206.157', 'http://167.71.206.157:1337', ],
+    domains: ['*', 'localhost', 'http://localhost:1337', '167.71.206.157', 'http://167.71.206.157:1337', 'https://api.chainauth.dev', 'api.chainauth.dev'],
     remotePatterns: [
       {
         protocol: 'https',
         hostname: 'images.unsplash.com'
+      },
+      {
+        protocol: 'https',
+        hostname: 'api.chainauth.dev'
       }
     ],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],

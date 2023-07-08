@@ -33,9 +33,9 @@ const ReviewSummary = ({ reviews }) => {
     return `${numReviewers} รีวิว`;
   };
   return (
-    <div>
+    <div className="flex items-center">
       <StarRating rating={averageScore} setRating={() => {}} />
-      {getReviewerNumberText(numReviewers)}
+      <div className="ml-4"> {getReviewerNumberText(numReviewers)}</div>
     </div>
   );
 };

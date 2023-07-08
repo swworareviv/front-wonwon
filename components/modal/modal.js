@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import axios from 'axios';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import StarRating from '@/components/review/StarRating';
 import TextInput from '@/components/review/TextInput';
@@ -9,6 +8,18 @@ import ReviewService from '@/services/review';
 import { useRouter } from 'next/router';
 
 const Modal = ({ shopId, reviewTags, setModal }) => {
+  useEffect(() => {
+    const elements = document.querySelectorAll('span.star');
+    elements.forEach((star) => {
+      star.style.fontSize = '40px';
+    });
+    return () => {
+      elements.forEach((star) => {
+        star.style.fontSize = '16px';
+      });
+    };
+  }, []);
+
   const router = useRouter();
 
   const [rating, setRating] = useState(0);
@@ -133,14 +144,18 @@ const Modal = ({ shopId, reviewTags, setModal }) => {
                       >
                         ให้คะแนนและรีวิวร้านนี้
                       </h3>
-                      <div className="divide-y card divide-dashed">
+                      <div className="divide-y card divide-dashed divide-butter-dark">
                         <div className="mt-2 pb-4 text-brown-default font-kanit text-base font-medium">
                           ความพึงพอใจในการซ่อมครั้งนี้
-                          <StarRating rating={rating} setRating={setRating} />
-                          <TagReviews
-                            reviewTags={checkedReviewTags}
-                            handleTagClicked={handleTagClicked}
-                          />
+                          <div className="mt-2">
+                            <StarRating rating={rating} setRating={setRating} />
+                          </div>
+                          <div className="mt-1">
+                            <TagReviews
+                              reviewTags={checkedReviewTags}
+                              handleTagClicked={handleTagClicked}
+                            />
+                          </div>
                         </div>
                         <div className="pt-5 text-brown-mid font-medium font-kanit">
                           <TextInput

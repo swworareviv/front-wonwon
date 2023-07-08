@@ -91,12 +91,12 @@ const ShopPresenter = ({ shop, reviews, reviewTags }) => {
           {address_detail}
         </p>
         <div className="rounded-lg bg-butter-light drop-shadow-md">
-          <div className="grid gap-6 p-3 m-3 divide-y card divide-dashed">
-            <div>
-              <FontAwesomeIcon icon={faClock} />
+          <div className="grid gap-6 px-10 py-6 my-3 divide-y card divide-dashed divide-butter-dark">
+            <div className="flex">
+              <FontAwesomeIcon icon={faClock} className="mr-2 fa-xl" />
               <OpeTimeDetail ope={shop.attributes.shop_operating_times.data} />
             </div>
-            <div className="py-4">
+            <div className="pt-4">
               <p className="text-xs font-bold text-brown-default font-kanit">
                 ประเภทการซ่อมที่เชี่ยวชาญ
               </p>
@@ -127,11 +127,11 @@ const ShopPresenter = ({ shop, reviews, reviewTags }) => {
                 setClickedContactIcon(clickedIcon);
               }}
             />
-            <div className="py-4">
+            <div className="pt-4">
               <p className="text-xs font-bold text-brown-default font-kanit">
                 วิธีชำระค่าบริการ:
               </p>
-              <div className="flex flex-row self-center justify-center mt-2 space-x-12">
+              <div className="flex justify-around mt-2 p-4">
                 {payments.payments.map((payment, index) => {
                   if (payment === 'cash') {
                     return (

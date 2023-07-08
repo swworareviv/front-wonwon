@@ -18,11 +18,11 @@ const Contact = ({ contact, onIconClick }) => {
     }
   ];
   return (
-    <div className="w-full py-4">
+    <div className="pt-4">
       <p className="text-xs font-bold text-brown-default font-kanit">
         ช่องทางติดต่อ
       </p>
-      <div className="flex justify-between mt-2 ">
+      <div className="flex justify-around mt-2 p-4">
         {contactsMethods.map((contactMethod, index) => {
           if (!contactMethod.data) return null;
           const icon =

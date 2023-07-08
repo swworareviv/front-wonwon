@@ -60,12 +60,12 @@ const OpeTimeDetail = ({ ope }) => {
     return (
       <>
         {opeDay ? (
-          <li className="flex-column">
+          <div className="flex-column text-brown-default mr-4">
             <div className="text-xs font-kanit">{dayStr}</div>
-            <div className="text-base font-kanit">
+            <div className="text-base font-kanit font-medium">
               {startTimeStr} - {endTimeStr}
             </div>
-          </li>
+          </div>
         ) : (
           ''
         )}
@@ -74,12 +74,10 @@ const OpeTimeDetail = ({ ope }) => {
   };
 
   return (
-    <div>
-      <ul className="grid items-center content-center grid-cols-4 gap-4 ">
-        {outputOpeObj.map((tmpObj, index) => {
-          return <Detail key={index} opeDay={tmpObj} />;
-        })}
-      </ul>
+    <div className="flex ">
+      {outputOpeObj.map((tmpObj, index) => {
+        return <Detail key={index} opeDay={tmpObj} />;
+      })}
     </div>
   );
 };

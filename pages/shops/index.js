@@ -133,11 +133,21 @@ const ShopsPage = ({ shops, repairTags, error }) => {
             onChange={handleDistanceChange}
             className="text-center border-2 rounded-full grow border-brown-light focus:border-brown-default text-brown-default bg-butter-default font-kanit"
           >
-            <option value="100">ห่างจากฉัน</option>
-            <option value="2">2 กม</option>
-            <option value="5">5 กม</option>
-            <option value="10">10 กม</option>
-            <option value="15">15 กม</option>
+            <option value="100" className="bg-butter-default">
+              ห่างจากฉัน
+            </option>
+            <option value="2" className=" bg-butter-default">
+              2 กม
+            </option>
+            <option value="5" className=" bg-butter-default">
+              5 กม
+            </option>
+            <option value="10" className=" bg-butter-default">
+              10 กม
+            </option>
+            <option value="15" className=" bg-butter-default">
+              15 กม
+            </option>
           </select>
           <button
             onClick={onFormat}

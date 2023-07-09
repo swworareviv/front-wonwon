@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import shopService from '@/services/shop';
+import { faXmark } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const FilterTagModal = ({
   repairTags,
@@ -52,12 +54,21 @@ const FilterTagModal = ({
           <div className="relative overflow-hidden text-left bg-butter-default rounded-t-[24px] shadow-md w-full">
             <div className="flex items-start px-10 pt-8">
               <div className="ml-4 divide-y card divide-dashed grow ">
-                <h3
-                  className="mb-2 text-xs font-medium leading-6 text-brown-mid font-kanit"
-                  id="modal-title"
-                >
-                  ปรับรูปแบบการซ่อม
-                </h3>
+                <div className="flex">
+                  <h3
+                    className="mb-2 text-xs font-medium leading-6 text-brown-mid font-kanit"
+                    id="modal-title"
+                  >
+                    ปรับรูปแบบการซ่อม
+                  </h3>
+                  <div className="grow"></div>
+                  <FontAwesomeIcon
+                    icon={faXmark}
+                    size="xl"
+                    onClick={onCancel}
+                    className="flex "
+                  />
+                </div>
                 <h1
                   className="py-4 text-base font-medium leading-6 text-brown-default font-kanit"
                   id="modal-title"

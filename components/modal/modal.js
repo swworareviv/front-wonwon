@@ -7,6 +7,9 @@ import TagReviews from '@/components/review/TagReviews';
 import ReviewService from '@/services/review';
 import { useRouter } from 'next/router';
 
+import { faXmark } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 const Modal = ({ shopId, reviewTags, setModal }) => {
   useEffect(() => {
     const elements = document.querySelectorAll('span.star');
@@ -119,7 +122,6 @@ const Modal = ({ shopId, reviewTags, setModal }) => {
 
   const onCancel = () => {
     setModal(false);
-    resetState();
   };
 
   return (
@@ -138,12 +140,21 @@ const Modal = ({ shopId, reviewTags, setModal }) => {
                 <div className="sm:flex sm:items-start">
                   <div className="mt-3 px-3 sm:mt-0 sm:ml-4 sm:text-left">
                     <div>
-                      <h3
-                        className="font-medium leading-6 font-kanit text-brown-mid text-xs"
-                        id="modal-title"
-                      >
-                        ให้คะแนนและรีวิวร้านนี้
-                      </h3>
+                      <div className="flex">
+                        <h3
+                          className="font-medium leading-6 font-kanit text-brown-mid text-xs"
+                          id="modal-title"
+                        >
+                          ให้คะแนนและรีวิวร้านนี้
+                        </h3>
+                        <div className="grow"></div>
+                        <FontAwesomeIcon
+                          icon={faXmark}
+                          size="xl"
+                          onClick={onCancel}
+                          className="flex "
+                        />
+                      </div>
                       <div className="divide-y card divide-dashed divide-butter-dark">
                         <div className="mt-2 pb-4 text-brown-default font-kanit text-base font-medium">
                           ความพึงพอใจในการซ่อมครั้งนี้

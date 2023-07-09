@@ -9,6 +9,7 @@ const Header = () => {
           src={Reviv_logo}
           width={50}
           height={50}
+          onClick={event =>  window.location.href='/shops'}
         />
       </nav>
     </div>

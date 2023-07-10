@@ -52,6 +52,10 @@ const ShopsPage = ({ shops, repairTags, error }) => {
       return { ...repairTag, checked: false };
     })
   );
+  const repairTagAmount = filterRepairTags.filter(
+    (filterRepair) => filterRepair.checked === true
+  ).length;
+
   const convertRepairTagArrayToText = (filterTags) => {
     const checkedRepairTagText = filterTags.map((filterTag) => {
       if (filterTag.checked === true) {
@@ -153,7 +157,16 @@ const ShopsPage = ({ shops, repairTags, error }) => {
             onClick={onFormat}
             className="text-center border-2 border-solid rounded-full grow border-brown-light focus:outline-none focus:border-brown-default text-brown-default font-kanit"
           >
-            ปรับรูปแบบการซ่อม
+            {repairTagAmount ? (
+              <div className="flex flex-row font-kanit ">
+                <div className="basis-1/6 p-1 w-6 h-6 relative rounded-full bg-brown-light justify-center items-center mx-2 text-[14px] text-butter-default text-center">
+                  {repairTagAmount}
+                </div>
+                <div className="basis-1/8 p-1">ปรับรูปแบบการซ่อม</div>
+              </div>
+            ) : (
+              ' ปรับรูปแบบการซ่อม'
+            )}
           </button>
         </div>
         <MapList initialLocation={currentLoacaiton()} shops={totalShops} />

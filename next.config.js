@@ -12,7 +12,9 @@ module.exports = {
       'https://api.chainauth.dev',
       'api.chainauth.dev',
       'api.wonwonbyreviv.com',
-      'https://api.wonwonbyreviv.com'
+      'https://api.wonwonbyreviv.com',
+      'wonwon-files.sgp1.digitaloceanspaces.com',
+      'https://wonwon-files.sgp1.digitaloceanspaces.com'
     ],
     remotePatterns: [
       {
@@ -26,6 +28,10 @@ module.exports = {
       {
         protocol: 'https',
         hostname: 'api.wonwonbyreviv.com'
+      },
+      {
+        protocol: 'https',
+        hostname: 'wonwon-files.sgp1.digitaloceanspaces.com'
       }
     ],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],

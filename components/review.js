@@ -1,8 +1,5 @@
 import Zoom from 'next-image-zoom';
-import config from '@/config/index';
 import moment from 'moment';
-
-const { apiBaseUrl } = config;
 
 const Review = ({ review }) => {
   const reviewInfo = review.attributes;
@@ -60,7 +57,7 @@ const Review = ({ review }) => {
                 <Zoom
                   key={index}
                   alt="/"
-                  src={apiBaseUrl + image.attributes.url}
+                  src={image.attributes.url}
                   layout="fill"
                 />
               </div>

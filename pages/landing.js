@@ -2,17 +2,25 @@ import Image from 'next/image';
 // import Link from 'next/link';
 import Landing_img from '@/public/landing-img.png';
 import Reviv_logo from '@/public/Reviv_logo_landing.png';
+import wonwon_icon from '@/public/wonwon_icon.svg';
 
 const LandingPage = ({}) => {
   const url = `/shops`;
   return (
     <div className="w-full p-4 bg-butter-default ">
-      <div className="pt-5 p-4 text-center">
-        <div>
-          <Image src={Reviv_logo} width={40} height={60} />
-        </div>
+      <div className="p-4 pt-5 text-center">
+        <Image
+          alt="logo"
+          src={wonwon_icon}
+          width={120}
+          height={100}
+          style={{
+            filter:
+              'brightness(0) saturate(100%) invert(78%) sepia(11%) saturate(4156%) hue-rotate(13deg) brightness(105%) contrast(72%)'
+          }}
+        />
         <div className="pt-4">
-          <Image src={Landing_img} width={310} height={310} />
+          <Image alt="description" src={Landing_img} width={310} height={310} />
         </div>
         <div className="my-4 text-xs font-normal text-brown-default font-kanit">
           <p>แพลตฟอร์มรวบรวมร้าน (ช่าง) ซ่อมเสื้อผ้า</p>

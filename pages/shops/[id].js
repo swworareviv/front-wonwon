@@ -28,7 +28,7 @@ const ShopPresenter = ({ shop, reviews, reviewTags }) => {
   const { id } = shop;
   const {
     name,
-    address_detail,
+    landmark,
     latitude,
     longitude,
     shop_images,
@@ -88,7 +88,7 @@ const ShopPresenter = ({ shop, reviews, reviewTags }) => {
           <MapDetail lat={latitude} lng={longitude} />
         </div>
         <p className="h-8 p-1 mx-5 mt-1 text-xs font-medium text-center rounded-lg drop-shadow-md -top-4 bg-butter-light text-brown-default font-kanit">
-          {address_detail}
+          {landmark}
         </p>
         <div className="rounded-lg bg-butter-light drop-shadow-md">
           <div className="grid gap-6 px-10 py-6 my-3 divide-y card divide-dashed divide-butter-dark">

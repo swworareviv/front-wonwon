@@ -51,8 +51,20 @@ class ShopService {
               name: { $contains: searchText }
             },
             {
+              province: { $contains: searchText }
+            },
+            {
+              district: { $contains: searchText }
+            },
+            {
+              sub_district: { $contains: searchText }
+            },
+            {
               address_detail: { $contains: searchText }
-            }
+            },
+            {
+              landmark: { $contains: searchText }
+            },
           ]
         }
       },
@@ -60,7 +72,7 @@ class ShopService {
         encodeValuesOnly: true // prettify URL
       }
     );
-    const url = `/api/Shops?${query}&sort[0]=name&populate=deep`;
+    const url = `/api/Shops?${query}&sort[0]=name&populate=deep&pagination[pageSize]=100`;
     const resp = await this.axiosClient.get(url);
     return resp.data?.data;
   }

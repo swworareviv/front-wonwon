@@ -4,30 +4,28 @@ const getDayStrFromDate = (date) => {
   return date.toLocaleString('en-us', { weekday: 'short' }).toLowerCase();
 };
 
-const getTimeStrFromDate = (date) => {
-  return `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
-};
-
 const getOpeTimeText = (operatedTimes) => {
   const today = new Date();
   const todayDay = getDayStrFromDate(today);
-  const curTime = getTimeStrFromDate(today);
 
   const todayOpen = operatedTimes.find(
     (operatedTime) => operatedTime.attributes.day === todayDay
   );
 
-  if (
-    todayOpen &&
-    todayOpen.attributes.startTime <= curTime &&
-    todayOpen.attributes.endTime > curTime
-  ) {
-    var endTime = new moment(
-      todayOpen.attributes.endTime,
-      'HH:mm:ss'
-    ).format('LT');
-
-    return `เปิดอยู่ ปิด ${endTime}`;
+  if (todayOpen) {
+    const startDateTime = new Date(
+      today.toDateString() + ' ' + todayOpen.attributes.startTime
+    );
+    const endDateTime = new Date(
+      today.toDateString() + ' ' + todayOpen.attributes.endTime
+    );
+    if (startDateTime <= today && today <= endDateTime) {
+      const endTime = new moment(
+        todayOpen.attributes.endTime,
+        'HH:mm:ss'
+      ).format('LT');
+      return `เปิดอยู่ ปิด ${endTime}`;
+    }
   }
 
   // today not found or already close

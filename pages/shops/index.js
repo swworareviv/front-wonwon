@@ -157,21 +157,19 @@ const ShopsPage = ({ shops, repairTags, error }) => {
             onClick={onFormat}
             className="text-center border-2 border-solid rounded-full grow border-brown-light focus:outline-none focus:border-brown-default text-brown-default font-kanit"
           >
-            {repairTagAmount ? (
-              <div className="flex flex-row font-kanit ">
-                <div className="basis-1/6 p-1 w-6 h-6 relative rounded-full bg-brown-light justify-center items-center mx-2 text-[14px] text-butter-default text-center">
+            <div className="flex justify-center font-kanit">
+              {repairTagAmount ? (
+                <div className="p-1 w-6 h-6 relative rounded-full bg-brown-light justify-center items-center mx-2 text-[14px] text-butter-default text-center">
                   {repairTagAmount}
                 </div>
-                <div className="basis-1/8 p-1">ปรับรูปแบบการซ่อม</div>
-              </div>
-            ) : (
-              ' ปรับรูปแบบการซ่อม'
-            )}
+              ) : null}
+              <div className="p-1">เลือกบริการซ่อม</div>
+            </div>
           </button>
         </div>
         <MapList initialLocation={currentLoacaiton()} shops={totalShops} />
         <div className="my-4 text-xs font-medium text-brick font-kanit">
-          ผลการค้นหา {totalShops.length} ร้านซ่อม
+          เจอ {totalShops.length} ร้าน
         </div>
         {totalShops ? (
           <div className="space-y-2 flex-column">
@@ -212,7 +210,11 @@ const ShopsPage = ({ shops, repairTags, error }) => {
                         OpeFlag ? 'text-brown-default' : 'text-brown-light'
                       } font-normal font-kanit`}
                     >
-                      <div>{shop.attributes.address_detail}</div>
+                      <div>
+                        {shop.attributes.address_detail}{' '}
+                        {shop.attributes.sub_district}{' '}
+                        {shop.attributes.district}
+                      </div>
                     </div>
                     {opeTime ? (
                       <div

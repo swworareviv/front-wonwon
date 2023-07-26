@@ -4,7 +4,7 @@ import wonwon_icon from '@/public/wonwon_icon.svg';
 
 const Header = () => {
   return (
-    <div className="px-4 flex w-full h-[48px] bg-green-default items-center drop-shadow-lg">
+    <div className="px-0 pt-1 flex w-full h-[48px] bg-green-default items-center drop-shadow-lg">
       <nav>
         <div
           style={{ width: 'fit-content', height: '100%', position: 'relative' }}
@@ -13,8 +13,8 @@ const Header = () => {
             className="cursor-pointer "
             alt="logo"
             src={wonwon_icon}
-            height={45}
-            width={60}
+            height={110}
+            width={80}
             onClick={() => (window.location.href = '/shops')}
             style={{
               filter:

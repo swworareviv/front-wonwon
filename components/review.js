@@ -22,7 +22,7 @@ const Review = ({ review }) => {
   return (
     <div className="review">
       <p className="text-base font-normal text-brown-default font-kanit">
-        {reviewInfo.username}
+        Username {reviewInfo.username}
       </p>
       {presenteCreateDate ? (
         <p className="text-xs font-medium text-secondary-content text-brown-mid font-kanit">

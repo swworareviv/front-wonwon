@@ -138,11 +138,11 @@ const Modal = ({ shopId, reviewTags, setModal }) => {
             <div className="relative overflow-hidden text-left bg-butter-default rounded-t-[24px] shadow-md w-full">
               <div className="flex items-start px-5 pt-8">
                 <div className="sm:flex sm:items-start">
-                  <div className="mt-3 px-3 sm:mt-0 sm:ml-4 sm:text-left">
+                  <div className="px-3 mt-3 sm:mt-0 sm:ml-4 sm:text-left">
                     <div>
                       <div className="flex">
                         <h3
-                          className="font-medium leading-6 font-kanit text-brown-mid text-xs"
+                          className="text-xs font-medium leading-6 font-kanit text-brown-mid"
                           id="modal-title"
                         >
                           ให้คะแนนและรีวิวร้านนี้
@@ -156,8 +156,8 @@ const Modal = ({ shopId, reviewTags, setModal }) => {
                         />
                       </div>
                       <div className="divide-y card divide-dashed divide-butter-dark">
-                        <div className="mt-2 pb-4 text-brown-default font-kanit text-base font-medium">
-                          ความพึงพอใจในการซ่อมครั้งนี้
+                        <div className="pb-4 mt-2 text-base font-medium text-brown-default font-kanit">
+                          พอใจแค่ไหน ถูกใจเรื่องอะไรบ้าง
                           <div className="mt-2">
                             <StarRating rating={rating} setRating={setRating} />
                           </div>
@@ -168,15 +168,15 @@ const Modal = ({ shopId, reviewTags, setModal }) => {
                             />
                           </div>
                         </div>
-                        <div className="pt-5 text-brown-mid font-medium font-kanit">
+                        <div className="pt-5 font-medium text-brown-mid font-kanit">
                           <TextInput
-                            title="ให้คะแนนและรีวิวร้านนี้"
+                            title="ร้านนี้บริการเป็นไง เล่าให้ทุกคนฟังหน่อย"
                             placeholder="เขียนรีวิวให้ร้านนี้"
                             review={review}
                             setReview={setReview}
                           />
                           <TextInput
-                            title="ใส่ชื่อของคุณ"
+                            title="ชื่อของคุณ"
                             placeholder="ใส่ชื่อของคุณ"
                             review={username}
                             setReview={setName}
@@ -198,7 +198,7 @@ const Modal = ({ shopId, reviewTags, setModal }) => {
                               />
                             );
                           })}
-                          <div className="font-kanit pb-3 text-brown-mid font-medium text-xs">
+                          <div className="pb-3 text-xs font-medium font-kanit text-brown-mid">
                             เพิ่มรูป
                           </div>
                           <input
@@ -217,17 +217,10 @@ const Modal = ({ shopId, reviewTags, setModal }) => {
                 <button
                   type="button"
                   onClick={onSubmit}
-                  className="w-80 h-12 text-base font-normal rounded-full btn btn-primary bg-green-default text-brown-default font-kanit"
+                  className="h-12 text-base font-normal rounded-full w-80 btn btn-primary bg-green-default text-brown-default font-kanit"
                 >
-                  บันทึก
+                  ส่งรีวิว
                 </button>
-                {/* <button
-                  type="button"
-                  onClick={onCancel}
-                  className="inline-flex justify-center w-full px-4 py-2 mt-3 text-base font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
-                >
-                  Cancel
-                </button> */}
               </div>
             </div>
           </div>

@@ -5,7 +5,7 @@ const SearchBox = ({ searchText, updateSearch, onSearch }) => {
         <label className="relative block ">
           <input
             className="w-full py-2 pl-3 pr-10 text-sm font-normal border-b-2 rounded-sm placeholder-brown-light bg-butter-light drop-shadow-md border-brown-light focus:outline-none focus:border-brown-default text-brown-default font-kanit"
-            placeholder="ใส่ชื่อร้าน ชื่อย่าน หรือที่อยู่สำหรับค้นหา"
+            placeholder="ค้นหาชื่อเขต ชื่อร้าน หรือที่อยู่ร้าน"
             value={searchText}
             onChange={(e) => updateSearch(e.target.value)}
             type="text"

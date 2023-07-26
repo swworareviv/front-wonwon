@@ -53,13 +53,13 @@ const FilterTagModal = ({
         <div className="flex items-end justify-center min-h-full">
           <div className="relative overflow-hidden text-left bg-butter-default rounded-t-[24px] shadow-md w-full">
             <div className="flex items-start px-10 pt-8">
-              <div className="ml-4 divide-y card divide-dashed grow ">
+              <div className="ml-4 divide-y divide-butter-dark card divide-dashed grow ">
                 <div className="flex">
                   <h3
                     className="mb-2 text-xs font-medium leading-6 text-brown-mid font-kanit"
                     id="modal-title"
                   >
-                    ปรับรูปแบบการซ่อม
+                    เลือกบริการซ่อม
                   </h3>
                   <div className="grow"></div>
                   <FontAwesomeIcon
@@ -73,7 +73,7 @@ const FilterTagModal = ({
                   className="py-4 text-base font-medium leading-6 text-brown-default font-kanit"
                   id="modal-title"
                 >
-                  เลือกประเภทการซ่อม (เลือกได้มากกว่า 1)
+                  เลือกบริการซ่อมได้มากกว่า 1 อย่าง
                 </h1>
                 {checkedRepairTags.map((repairTag, index) => {
                   return (

@@ -80,19 +80,19 @@ const ShopPresenter = ({ shop, reviews, reviewTags }) => {
             href={`tel:${phones[0]}`}
             className="flex justify-center h-12 text-base border-2 rounded-full grow placeholder-brown-light border-brown-light focus:outline-none focus:border-brown-default text-brown-default btn btn-outline bg-green-default font-kanit"
           >
-            <button disabled={!phones}>โทร</button>
+            <button disabled={!phones}>โทรหาร้าน</button>
           </a>
           <a
             href={google_map_url}
             className="flex justify-center h-12 text-base border-2 border-solid rounded-full grow border-green-default focus:outline-none focus:border-brown-default text-brown-default bg-butter-default font-kanit"
           >
-            <button>นำทาง</button>
+            <button>เปิดแผนที่</button>
           </a>
         </div>
         <div className="mx-4">
           <MapDetail lat={latitude} lng={longitude} />
         </div>
-        <div className="h-8 p-1 mx-5 mt-1 text-xs font-medium text-center rounded-lg drop-shadow-md -top-4 bg-butter-light text-brown-default font-kanit">
+        <div className="p-1 mx-5 mt-1 text-xs font-medium text-center rounded-lg drop-shadow-md bg-butter-light text-brown-default font-kanit">
           <p>{location_detail}</p>
           <p>{landmark}</p>
         </div>
@@ -104,7 +104,7 @@ const ShopPresenter = ({ shop, reviews, reviewTags }) => {
             </div>
             <div className="pt-4">
               <p className="text-xs font-bold text-brown-default font-kanit">
-                ประเภทการซ่อมที่เชี่ยวชาญ
+                บริการซ่อมที่เชี่ยวชาญ
               </p>
               <div className="flex flex-row flex-wrap">
                 {shop_repair_tag_links
@@ -135,9 +135,9 @@ const ShopPresenter = ({ shop, reviews, reviewTags }) => {
             />
             <div className="pt-4">
               <p className="text-xs font-bold text-brown-default font-kanit">
-                วิธีชำระค่าบริการ:
+                วิธีจ่ายค่าบริการ
               </p>
-              <div className="flex justify-around mt-2 p-4">
+              <div className="flex justify-around p-4 mt-2">
                 {payments.payments.map((payment, index) => {
                   if (payment === 'cash') {
                     return (
@@ -159,12 +159,17 @@ const ShopPresenter = ({ shop, reviews, reviewTags }) => {
             </div>
           </div>
         </div>
-        <div className="flex justify-center w-full px-3">
+        <div className="flex justify-center w-full mt-4 ">
+          <div className="font-medium font-kanit">
+            รีวิวของคุณ ช่วยให้ทุกคนรู้จักช่างซ่อมใกล้บ้านได้
+          </div>
+        </div>
+        <div className="flex justify-center w-full px-3 mt-4">
           <button
             onClick={onReview}
             className="w-full h-12 text-base font-normal rounded-full btn btn-primary bg-green-default text-brown-default font-kanit"
           >
-            ให้คะแนนและรีวิวร้านนี้
+            รีวิวร้าน
           </button>
         </div>
         <br />

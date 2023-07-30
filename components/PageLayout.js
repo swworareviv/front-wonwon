@@ -1,9 +1,9 @@
 import Layout from '@/components/common/Layout';
 import Header from '@/components/Header';
 
-const PageLayout = ({ children }) => {
+const PageLayout = ({ children, footer = false }) => {
   return (
-    <Layout header={<Header />} s>
+    <Layout header={<Header />} footer={footer}>
       {children}
     </Layout>
   );

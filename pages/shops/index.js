@@ -124,7 +124,7 @@ const ShopsPage = ({ shops, repairTags, error }) => {
   const totalShops = tempShops.filter(() => true);
 
   return (
-    <PageLayout>
+    <PageLayout footer={true}>
       <div className="w-full p-4 bg-butter-default ">
         <SearchBox
           searchText={inputText}

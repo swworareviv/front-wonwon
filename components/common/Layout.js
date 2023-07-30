@@ -19,7 +19,7 @@ const Layout = ({ header, children, footer }) => {
                   'https://docs.google.com/forms/d/e/1FAIpQLScIEoSedtD3w-cvMDp6U4h_pe2aIUpWaE4tpf14maPhZUTlRQ/viewform'
                 )
               }
-              className=" bg-[#835020] h-[48px] rounded-lg w-2/4 justify-center items-center flex "
+              className=" cursor-pointer bg-[#835020] h-[48px] rounded-lg w-2/4 justify-center items-center flex "
             >
               <p>แนะนำ-ติชม</p>
             </div>
@@ -29,7 +29,7 @@ const Layout = ({ header, children, footer }) => {
                   'https://docs.google.com/forms/d/e/1FAIpQLSf_0Sg7j_PHtpFzFLVRMKdR7Lbjj_8-o3HdJB4NxeyJlso8jw/viewform'
                 )
               }
-              className=" bg-[#835020] h-[48px] rounded-lg w-2/4 text-center"
+              className=" cursor-pointer bg-[#835020] h-[48px] rounded-lg w-2/4 text-center"
             >
               <p>บอกต่อ</p>
               <p>ร้านซ่อมแถวบ้าน</p>

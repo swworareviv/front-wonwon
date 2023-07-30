@@ -152,7 +152,7 @@ const Modal = ({ shopId, reviewTags, setModal }) => {
                           icon={faXmark}
                           size="xl"
                           onClick={onCancel}
-                          className="flex "
+                          className="flex cursor-pointer"
                         />
                       </div>
                       <div className="divide-y card divide-dashed divide-butter-dark">
@@ -168,7 +168,7 @@ const Modal = ({ shopId, reviewTags, setModal }) => {
                             />
                           </div>
                         </div>
-                        <div className="pt-5 font-medium text-brown-mid font-kanit">
+                        <div className="font-medium x-5 text-brown-mid font-kanit">
                           <TextInput
                             title="ร้านนี้บริการเป็นไง เล่าให้ทุกคนฟังหน่อย"
                             placeholder="เขียนรีวิวให้ร้านนี้"

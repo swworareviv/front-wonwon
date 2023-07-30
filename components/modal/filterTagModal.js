@@ -66,7 +66,7 @@ const FilterTagModal = ({
                     icon={faXmark}
                     size="xl"
                     onClick={onCancel}
-                    className="flex "
+                    className="flex cursor-pointer "
                   />
                 </div>
                 <h1

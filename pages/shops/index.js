@@ -135,9 +135,9 @@ const ShopsPage = ({ shops, repairTags, error }) => {
           <select
             value={selectedDistance}
             onChange={handleDistanceChange}
-            className="text-center border-2 rounded-full grow border-brown-light focus:border-brown-default text-brown-default bg-butter-default font-kanit"
+            className="text-center border-2 rounded-full cursor-pointer grow border-brown-light focus:border-brown-default text-brown-default bg-butter-default font-kanit"
           >
-            <option value="100" className="bg-butter-default">
+            <option value="100" className="bg-butter-default แ">
               ห่างจากฉัน
             </option>
             <option value="2" className=" bg-butter-default">

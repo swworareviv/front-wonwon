@@ -12,7 +12,7 @@ const SearchBox = ({ searchText, updateSearch, onSearch }) => {
           />
 
           <span
-            className="absolute inset-y-0 right-0 flex items-center pr-3 text-brown-light"
+            className="absolute inset-y-0 right-0 flex items-center pr-3 cursor-pointer text-brown-light"
             onClick={onSearch}
           >
             <svg

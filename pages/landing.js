@@ -11,7 +11,7 @@ const LandingPage = ({}) => {
     if (newWindow) newWindow.opener = null;
   };
   return (
-    <div className="w-full h-fit bg-butter-default ">
+    <div className="w-full h-full bg-butter-default ">
       <div className="text-center">
         <Image
           alt="logo"
@@ -52,7 +52,7 @@ const LandingPage = ({}) => {
           <div
             onClick={() =>
               openInNewTab(
-                'https://www.google.com'
+                'https://revivcommunity.org/wonwon-future-features/'
               )
             }
             className=" cursor-pointer bg-[#835020] h-[48px] rounded-lg w-full justify-center items-center flex "

@@ -76,12 +76,18 @@ const ShopPresenter = ({ shop, reviews, reviewTags }) => {
         </p>
         <ShopImage shop_images={shop_images.data} />
         <div className="flex mx-4 mb-2 space-x-2 ">
-          <a
-            href={`tel:${phones[0]}`}
-            className="flex justify-center h-12 text-base border-2 rounded-full grow placeholder-brown-light border-brown-light focus:outline-none focus:border-brown-default text-brown-default btn btn-outline bg-green-default font-kanit"
-          >
-            <button disabled={!phones}>โทรหาร้าน</button>
-          </a>
+          {phones && phones.length > 0 ? (
+            <a
+              href={`tel:${phones[0]}`}
+              className="flex justify-center h-12 text-base border-2 rounded-full grow placeholder-brown-light border-brown-light focus:outline-none focus:border-brown-default text-brown-default btn btn-outline bg-green-default font-kanit"
+            >
+              <button disabled={!phones}>โทรหาร้าน</button>
+            </a>
+          ) : (
+            <div className="flex justify-center h-12 text-base border-2 rounded-full grow placeholder-brown-light border-brown-light focus:outline-none focus:border-brown-default text-brown-default btn btn-outline bg-green-disabled font-kanit">
+              <button disabled={true}>โทรหาร้าน</button>
+            </div>
+          )}
           <a
             href={google_map_url}
             className="flex justify-center h-12 text-base border-2 border-solid rounded-full grow border-green-default focus:outline-none focus:border-brown-default text-brown-default bg-butter-default font-kanit"

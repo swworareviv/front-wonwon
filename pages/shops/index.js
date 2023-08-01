@@ -4,6 +4,8 @@ import repairTagService from '@/services/repairTag';
 import SearchBox from '@/components/SearchBox';
 import OpeTimeList from '@/components/list/OpeTimeList';
 import PageLayout from '@/components/PageLayout';
+import LinkFooter from '@/components/LinkFooter';
+
 import FilterTagModal from '@/components/modal/filterTagModal';
 import MapList from '@/components/MapList';
 import { useGeolocated } from 'react-geolocated';
@@ -124,7 +126,7 @@ const ShopsPage = ({ shops, repairTags, error }) => {
   const totalShops = tempShops.filter(() => true);
 
   return (
-    <PageLayout footer={true}>
+    <PageLayout>
       <div className="w-full p-4 bg-butter-default ">
         <SearchBox
           searchText={inputText}
@@ -242,6 +244,7 @@ const ShopsPage = ({ shops, repairTags, error }) => {
             })}
           </div>
         ) : null}
+        <LinkFooter />
       </div>
       {filter && (
         <FilterTagModal

@@ -12,7 +12,7 @@ const LinkFooter = () => {
 
   return (
     <div style={{ position: 'sticky', bottom: '0', 'z-index': '5' }}>
-      <div className="flex p-2 space-x-2 text-butter-light font-kanit">
+      <div className="flex p-2 space-x-2 text-[12px] text-butter-light font-kanit">
         <div
           onClick={() =>
             openInNewTab(
@@ -25,7 +25,7 @@ const LinkFooter = () => {
             alt="logo"
             src={doc}
             fit
-            className="w-10"
+            className="w-9"
             style={{
               filter:
                 'brightness(0) saturate(100%) invert(78%) sepia(11%) saturate(4156%) hue-rotate(13deg) brightness(105%) contrast(72%)'
@@ -36,7 +36,7 @@ const LinkFooter = () => {
             alt="logo"
             src={message}
             fit
-            className="w-10"
+            className="w-9"
             style={{
               filter:
                 'brightness(0) saturate(100%) invert(78%) sepia(11%) saturate(4156%) hue-rotate(13deg) brightness(105%) contrast(72%)'
@@ -55,13 +55,13 @@ const LinkFooter = () => {
             alt="logo"
             src={mark}
             fit
-            className="w-10"
+            className="w-9"
             style={{
               filter:
                 'brightness(0) saturate(100%) invert(78%) sepia(11%) saturate(4156%) hue-rotate(13deg) brightness(105%) contrast(72%)'
             }}
           />
-          <div className="flex flex-col items-center justify-between p-2">
+          <div className="flex flex-col items-center justify-between">
             <p>บอกต่อ</p>
             <p>ร้านซ่อมแถวบ้าน</p>
           </div>
@@ -69,7 +69,7 @@ const LinkFooter = () => {
             alt="logo"
             src={location}
             fit
-            className="w-10"
+            className="w-9"
             style={{
               filter:
                 'brightness(0) saturate(100%) invert(78%) sepia(11%) saturate(4156%) hue-rotate(13deg) brightness(105%) contrast(72%)'

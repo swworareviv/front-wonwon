@@ -18,6 +18,10 @@ const PageLayout = ({ children }) => {
           content="The 1st Repair-Lifestyle platform in Thailand that connects consumers with local repair shops."
         />
         <meta property="og:image" content="/OG.png" />
+        <meta
+          name="viewport"
+          content="width=device-width,initial-scale=1.0"
+        ></meta>
         <link rel="shortcut icon" href="/favicon.jpg" />
       </Head>
       <Layout header={<Header />}>{children}</Layout>

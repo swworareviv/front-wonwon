@@ -127,7 +127,7 @@ const ShopsPage = ({ shops, repairTags, error }) => {
 
   return (
     <PageLayout>
-      <div className="w-full p-4 bg-butter-default ">
+      <div className="w-full p-4 ">
         <SearchBox
           searchText={inputText}
           updateSearch={changeInputText}

@@ -27,7 +27,7 @@ const LandingPage = ({}) => {
         <meta property="og:image" content="/OG.png" />
         <link rel="shortcut icon" href="/favicon.jpg" />
       </Head>
-      <div className="w-full h-full bg-butter-default ">
+      <div className="w-full h-full ">
         <div className="text-center">
           <Image
             alt="logo"

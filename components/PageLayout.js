@@ -15,7 +15,7 @@ const PageLayout = ({ children }) => {
         <meta property="og:title" content="WonWon by Reviv" />
         <meta
           property="og:description"
-          content="The 1st Repair-Lifestyle platform in Thailand that connects consumers with local repair shops.”e"
+          content="The 1st Repair-Lifestyle platform in Thailand that connects consumers with local repair shops."
         />
         <meta property="og:image" content="/OG.png" />
         <link rel="shortcut icon" href="/favicon.jpg" />

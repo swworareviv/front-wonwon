@@ -11,7 +11,7 @@ const LinkFooter = () => {
   };
 
   return (
-    <div style={{ position: 'sticky', bottom: '0', 'z-index': '5' }}>
+    <div style={{ position: 'sticky', bottom: '0', 'zIndex?': '5' }}>
       <div className="flex p-2 space-x-2 text-[12px] text-butter-light font-kanit">
         <div
           onClick={() =>
@@ -24,7 +24,7 @@ const LinkFooter = () => {
           <Image
             alt="logo"
             src={doc}
-            fit
+            fit="true"
             className="w-9"
             style={{
               filter:
@@ -35,7 +35,7 @@ const LinkFooter = () => {
           <Image
             alt="logo"
             src={message}
-            fit
+            fit="true"
             className="w-9"
             style={{
               filter:
@@ -54,7 +54,7 @@ const LinkFooter = () => {
           <Image
             alt="logo"
             src={mark}
-            fit
+            fit="true"
             className="w-9"
             style={{
               filter:
@@ -68,7 +68,7 @@ const LinkFooter = () => {
           <Image
             alt="logo"
             src={location}
-            fit
+            fit="true"
             className="w-9"
             style={{
               filter:

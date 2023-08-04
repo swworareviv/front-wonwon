@@ -69,7 +69,7 @@ const LandingPage = ({}) => {
               </button>
             </a>
           </div>
-          <div className="flex p-2 space-x-2 text-butter-light font-kanit">
+          <div className="flex p-2 pb-10 space-x-2 text-butter-light font-kanit">
             <div
               onClick={() =>
                 openInNewTab(
@@ -78,7 +78,7 @@ const LandingPage = ({}) => {
               }
               className=" cursor-pointer bg-[#835020] h-[48px] rounded-lg w-full justify-center items-center flex "
             >
-              <p>ติดตามฟีเจอร์ใหม่</p>
+              <p>ติดตามฟีเจอร์ใหม่ๆ</p>
             </div>
           </div>
         </div>

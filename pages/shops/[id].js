@@ -39,7 +39,8 @@ const ShopPresenter = ({ shop, reviews, reviewTags }) => {
     shop_repair_tag_links,
     contacts,
     payments,
-    google_map_url
+    google_map_url,
+    notes
   } = shop.attributes;
 
   const phones = contacts.phone?.length > 0 ? contacts.phone : null;
@@ -161,6 +162,14 @@ const ShopPresenter = ({ shop, reviews, reviewTags }) => {
                     return null;
                   }
                 })}
+              </div>
+            </div>
+            <div className="pt-4">
+              <p className="text-xs font-bold text-brown-default font-kanit">
+                เงื่อนไขการบริการ
+              </p>
+              <div className="p-1 mt-1 text-xs text-left  bg-butter-light text-brown-default font-kanit">
+                {notes[0].condition}
               </div>
             </div>
           </div>

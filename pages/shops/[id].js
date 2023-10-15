@@ -43,6 +43,12 @@ const ShopPresenter = ({ shop, reviews, reviewTags }) => {
     notes
   } = shop.attributes;
 
+  const condition =
+    notes && notes?.length > 0
+      ? notes[0].condition
+        ? notes[0].condition
+        : ''
+      : '';
   const phones = contacts.phone?.length > 0 ? contacts.phone : null;
 
   const additionalContact = useMemo(() => {
@@ -169,7 +175,7 @@ const ShopPresenter = ({ shop, reviews, reviewTags }) => {
                 เงื่อนไขการบริการ
               </p>
               <div className="p-1 mt-1 text-xs text-left  bg-butter-light text-brown-default font-kanit">
-                {notes[0].condition}
+                <div dangerouslySetInnerHTML={{ __html: condition }} />
               </div>
             </div>
           </div>

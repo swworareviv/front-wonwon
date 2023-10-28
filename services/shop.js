@@ -72,13 +72,13 @@ class ShopService {
         encodeValuesOnly: true // prettify URL
       }
     );
-    const url = `/api/Shops?${query}&sort[0]=name&populate=deep&pagination[pageSize]=100`;
+    const url = `/api/Shops?${query}&sort[0]=name&populate=deep&pagination[pageSize]=150`;
     const resp = await this.axiosClient.get(url);
     return resp.data?.data;
   }
 
   async getAllShops() {
-    const url = `/api/Shops/?sort[0]=name&populate=*&pagination[pageSize]=100`;
+    const url = `/api/Shops/?sort[0]=name&populate=*&pagination[pageSize]=150`;
     const resp = await this.axiosClient.get(url);
     return resp.data?.data;
   }

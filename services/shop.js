@@ -48,22 +48,22 @@ class ShopService {
           },
           $or: [
             {
-              name: { $contains: searchText }
+              name: { $containsi: searchText }
             },
             {
-              province: { $contains: searchText }
+              province: { $containsi: searchText }
             },
             {
-              district: { $contains: searchText }
+              district: { $containsi: searchText }
             },
             {
-              sub_district: { $contains: searchText }
+              sub_district: { $containsi: searchText }
             },
             {
-              address_detail: { $contains: searchText }
+              address_detail: { $containsi: searchText }
             },
             {
-              landmark: { $contains: searchText }
+              landmark: { $containsi: searchText }
             },
           ]
         }

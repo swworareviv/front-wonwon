@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import StarRating from '@/components/review/StarRating';
 import TextInput from '@/components/review/TextInput';
 import TagReviews from '@/components/review/TagReviews';

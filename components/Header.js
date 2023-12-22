@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import Reviv_logo from '@/public/Reviv_logo_header.jpg';
 import wonwon_icon from '@/public/wonwon_icon.svg';
 

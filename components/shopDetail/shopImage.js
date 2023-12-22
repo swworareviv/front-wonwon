@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import Zoom from 'next-image-zoom';
+// import Zoom from 'next-image-zoom';
 
 import {
   faCircleArrowLeft,
@@ -30,14 +30,14 @@ const ShopImage = ({ shop_images }) => {
   return (
     <div ref={slideRef} className="relative mx-4 select-none ">
       <div className="p-4 aspect-w-16 aspect-h-9 ">
-        <Zoom
+        {/* <Zoom
           src={shop_images[currentIndex].attributes.url}
           objectFit={'cover'}
           className="rounded-[15px]"
           layout={'responsive'}
           width={450}
           height={300}
-        />
+        /> */}
       </div>
 
       <div className="absolute flex items-center justify-between w-full px-5 transform -translate-y-1/2 top-1/2">

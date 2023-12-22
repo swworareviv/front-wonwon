@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from "next/legacy/image";
 // import Link from 'next/link';
 import Landing_img from '@/public/landing-img.png';
 import wonwon_icon from '@/public/wonwon_icon.svg';

@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import doc from '@/public/document.svg';
 import message from '@/public/message.svg';
 import mark from '@/public/mark.svg';

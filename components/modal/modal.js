@@ -83,7 +83,7 @@ const Modal = ({ shopId, reviewTags, setModal }) => {
   };
 
   const onSubmit = async () => {
-    const fileId = [];
+    let fileId = [];
     if (createObjectURLs.length > 0) {
       const myBlobs = await Promise.all(
         createObjectURLs.map(async (createObjectURL) => {

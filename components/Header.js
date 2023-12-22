@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Reviv_logo from '@/public/Reviv_logo_header.jpg';
 import wonwon_icon from '@/public/wonwon_icon.svg';
 
@@ -18,9 +18,11 @@ const Header = () => {
             onClick={() => (window.location.href = '/shops')}
             style={{
               filter:
-                'brightness(0) saturate(100%) invert(95%) sepia(46%) saturate(334%) hue-rotate(314deg) brightness(103%) contrast(95%)'
-            }}
-          />
+                'brightness(0) saturate(100%) invert(95%) sepia(46%) saturate(334%) hue-rotate(314deg) brightness(103%) contrast(95%)',
+
+              maxWidth: "100%",
+              height: "auto"
+            }} />
         </div>
       </nav>
     </div>

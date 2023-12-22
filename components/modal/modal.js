@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Image from "next/legacy/image";
+import Image from "next/image";
 import StarRating from '@/components/review/StarRating';
 import TextInput from '@/components/review/TextInput';
 import TagReviews from '@/components/review/TagReviews';
@@ -124,110 +124,111 @@ const Modal = ({ shopId, reviewTags, setModal }) => {
     setModal(false);
   };
 
-  return (
-    <>
-      <div
-        className="relative z-10 w-full"
-        aria-labelledby="modal-title"
-        role="dialog"
-        aria-modal="true"
-      >
-        <div className="fixed inset-0 transition-opacity bg-opacity-75 backdrop-blur-lg"></div>
-        <div className="fixed inset-0 z-10 overflow-y-auto">
-          <div className="flex items-end justify-center min-h-full">
-            <div className="relative overflow-hidden text-left bg-butter-default rounded-t-[24px] shadow-md w-full">
-              <div className="flex items-start px-5 pt-8">
-                <div className="sm:flex sm:items-start">
-                  <div className="px-3 mt-3 sm:mt-0 sm:ml-4 sm:text-left">
+  return <>
+    <div
+      className="relative z-10 w-full"
+      aria-labelledby="modal-title"
+      role="dialog"
+      aria-modal="true"
+    >
+      <div className="fixed inset-0 transition-opacity bg-opacity-75 backdrop-blur-lg"></div>
+      <div className="fixed inset-0 z-10 overflow-y-auto">
+        <div className="flex items-end justify-center min-h-full">
+          <div className="relative overflow-hidden text-left bg-butter-default rounded-t-[24px] shadow-md w-full">
+            <div className="flex items-start px-5 pt-8">
+              <div className="sm:flex sm:items-start">
+                <div className="px-3 mt-3 sm:mt-0 sm:ml-4 sm:text-left">
+                  <div>
+                    <div className="flex">
+                      <h3
+                        className="text-xs font-medium leading-6 font-kanit text-brown-mid"
+                        id="modal-title"
+                      >
+                        ให้คะแนนและรีวิวร้านนี้
+                      </h3>
+                      <div className="grow"></div>
+                      <FontAwesomeIcon
+                        icon={faXmark}
+                        size="xl"
+                        onClick={onCancel}
+                        className="flex cursor-pointer"
+                      />
+                    </div>
+                    <div className="divide-y card divide-dashed divide-butter-dark">
+                      <div className="pb-4 mt-2 text-base font-medium text-brown-default font-kanit">
+                        พอใจแค่ไหน ถูกใจเรื่องอะไรบ้าง
+                        <div className="mt-2">
+                          <StarRating rating={rating} setRating={setRating} />
+                        </div>
+                        <div className="mt-1">
+                          <TagReviews
+                            reviewTags={checkedReviewTags}
+                            handleTagClicked={handleTagClicked}
+                          />
+                        </div>
+                      </div>
+                      <div className="font-medium x-5 text-brown-mid font-kanit">
+                        <TextInput
+                          title="ร้านนี้บริการเป็นไง เล่าให้ทุกคนฟังหน่อย"
+                          placeholder="เขียนรีวิวให้ร้านนี้"
+                          review={review}
+                          setReview={setReview}
+                        />
+                        <TextInput
+                          title="ชื่อของคุณ"
+                          placeholder="ใส่ชื่อของคุณ"
+                          review={username}
+                          setReview={setName}
+                        />
+                        {/* Upload images */}
+                      </div>
+                    </div>
                     <div>
-                      <div className="flex">
-                        <h3
-                          className="text-xs font-medium leading-6 font-kanit text-brown-mid"
-                          id="modal-title"
-                        >
-                          ให้คะแนนและรีวิวร้านนี้
-                        </h3>
-                        <div className="grow"></div>
-                        <FontAwesomeIcon
-                          icon={faXmark}
-                          size="xl"
-                          onClick={onCancel}
-                          className="flex cursor-pointer"
+                      <div>
+                        {createObjectURLs.map((createObjectURL, index) => {
+                          return (
+                            <Image
+                              key={index}
+                              loader={() => createObjectURL}
+                              src={uploadedFileNames[index]}
+                              alt="Picture of the author"
+                              width={100}
+                              height={100}
+                              style={{
+                                maxWidth: "100%",
+                                height: "auto"
+                              }} />
+                          );
+                        })}
+                        <div className="pb-3 text-xs font-medium font-kanit text-brown-mid">
+                          เพิ่มรูป
+                        </div>
+                        <input
+                          type="file"
+                          name="myImage"
+                          onChange={uploadToClient}
                         />
                       </div>
-                      <div className="divide-y card divide-dashed divide-butter-dark">
-                        <div className="pb-4 mt-2 text-base font-medium text-brown-default font-kanit">
-                          พอใจแค่ไหน ถูกใจเรื่องอะไรบ้าง
-                          <div className="mt-2">
-                            <StarRating rating={rating} setRating={setRating} />
-                          </div>
-                          <div className="mt-1">
-                            <TagReviews
-                              reviewTags={checkedReviewTags}
-                              handleTagClicked={handleTagClicked}
-                            />
-                          </div>
-                        </div>
-                        <div className="font-medium x-5 text-brown-mid font-kanit">
-                          <TextInput
-                            title="ร้านนี้บริการเป็นไง เล่าให้ทุกคนฟังหน่อย"
-                            placeholder="เขียนรีวิวให้ร้านนี้"
-                            review={review}
-                            setReview={setReview}
-                          />
-                          <TextInput
-                            title="ชื่อของคุณ"
-                            placeholder="ใส่ชื่อของคุณ"
-                            review={username}
-                            setReview={setName}
-                          />
-                          {/* Upload images */}
-                        </div>
-                      </div>
-                      <div>
-                        <div>
-                          {createObjectURLs.map((createObjectURL, index) => {
-                            return (
-                              <Image
-                                key={index}
-                                loader={() => createObjectURL}
-                                src={uploadedFileNames[index]}
-                                alt="Picture of the author"
-                                width={100}
-                                height={100}
-                              />
-                            );
-                          })}
-                          <div className="pb-3 text-xs font-medium font-kanit text-brown-mid">
-                            เพิ่มรูป
-                          </div>
-                          <input
-                            type="file"
-                            name="myImage"
-                            onChange={uploadToClient}
-                          />
-                        </div>
-                      </div>
-                      {/* Upload images */}
                     </div>
+                    {/* Upload images */}
                   </div>
                 </div>
               </div>
-              <div className="flex justify-center w-full px-3 pt-4 pb-8">
-                <button
-                  type="button"
-                  onClick={onSubmit}
-                  className="h-12 text-base font-normal rounded-full w-80 btn btn-primary bg-green-default text-brown-default font-kanit"
-                >
-                  ส่งรีวิว
-                </button>
-              </div>
+            </div>
+            <div className="flex justify-center w-full px-3 pt-4 pb-8">
+              <button
+                type="button"
+                onClick={onSubmit}
+                className="h-12 text-base font-normal rounded-full w-80 btn btn-primary bg-green-default text-brown-default font-kanit"
+              >
+                ส่งรีวิว
+              </button>
             </div>
           </div>
         </div>
       </div>
-    </>
-  );
+    </div>
+  </>;
 };
 
 export default Modal;

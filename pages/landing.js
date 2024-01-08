@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from "next/image";
 // import Link from 'next/link';
 import Landing_img from '@/public/landing-img.png';
 import wonwon_icon from '@/public/wonwon_icon.svg';
@@ -29,23 +29,28 @@ const LandingPage = ({}) => {
       </Head>
       <div className="w-full h-full ">
         <div className="text-center">
-          <Image
-            alt="logo"
-            src={wonwon_icon}
-            width={200}
-            height={120}
-            style={{
-              filter:
-                'brightness(0) saturate(100%) invert(78%) sepia(11%) saturate(4156%) hue-rotate(13deg) brightness(105%) contrast(72%)'
-            }}
-          />
-          <div>
+          <div className="flex flex-col items-center w-full ">
+            <Image
+              alt="logo"
+              src={wonwon_icon}
+              width={200}
+              height={120}
+              style={{
+                filter:
+                  'brightness(0) saturate(100%) invert(78%) sepia(11%) saturate(4156%) hue-rotate(13deg) brightness(105%) contrast(72%)',
+
+                maxWidth: "100%",
+                height: "auto",
+              }} />
             <Image
               alt="description"
               src={Landing_img}
               width={210}
               height={210}
-            />
+              style={{
+                maxWidth: "100%",
+                height: "auto",
+              }} />
           </div>
           <div className="flex flex-col items-center justify-center mt-4 text-xs font-normal text-brown-default font-kanit">
             <p className="text-xl font-medium text-center ">WonWon</p>

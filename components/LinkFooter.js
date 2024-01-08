@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from "next/image";
 import doc from '@/public/document.svg';
 import message from '@/public/message.svg';
 import mark from '@/public/mark.svg';
@@ -28,9 +28,11 @@ const LinkFooter = () => {
             className="w-9"
             style={{
               filter:
-                'brightness(0) saturate(100%) invert(78%) sepia(11%) saturate(4156%) hue-rotate(13deg) brightness(105%) contrast(72%)'
-            }}
-          />
+                'brightness(0) saturate(100%) invert(78%) sepia(11%) saturate(4156%) hue-rotate(13deg) brightness(105%) contrast(72%)',
+
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p>แนะนำ-ติชม</p>
           <Image
             alt="logo"
@@ -39,9 +41,11 @@ const LinkFooter = () => {
             className="w-9"
             style={{
               filter:
-                'brightness(0) saturate(100%) invert(78%) sepia(11%) saturate(4156%) hue-rotate(13deg) brightness(105%) contrast(72%)'
-            }}
-          />
+                'brightness(0) saturate(100%) invert(78%) sepia(11%) saturate(4156%) hue-rotate(13deg) brightness(105%) contrast(72%)',
+
+              maxWidth: "100%",
+              height: "auto"
+            }} />
         </div>
         <div
           onClick={() =>
@@ -58,9 +62,11 @@ const LinkFooter = () => {
             className="w-9"
             style={{
               filter:
-                'brightness(0) saturate(100%) invert(78%) sepia(11%) saturate(4156%) hue-rotate(13deg) brightness(105%) contrast(72%)'
-            }}
-          />
+                'brightness(0) saturate(100%) invert(78%) sepia(11%) saturate(4156%) hue-rotate(13deg) brightness(105%) contrast(72%)',
+
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <div className="flex flex-col items-center justify-between">
             <p>บอกต่อ</p>
             <p>ร้านซ่อมแถวบ้าน</p>
@@ -72,9 +78,11 @@ const LinkFooter = () => {
             className="w-9"
             style={{
               filter:
-                'brightness(0) saturate(100%) invert(78%) sepia(11%) saturate(4156%) hue-rotate(13deg) brightness(105%) contrast(72%)'
-            }}
-          />
+                'brightness(0) saturate(100%) invert(78%) sepia(11%) saturate(4156%) hue-rotate(13deg) brightness(105%) contrast(72%)',
+
+              maxWidth: "100%",
+              height: "auto"
+            }} />
         </div>
       </div>
     </div>
